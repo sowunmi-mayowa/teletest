@@ -10,13 +10,13 @@ function App() {
   }, [telegram]);
   
   const handleClick = () => {
-    telegram.MainButton.text = "button clicked- connected";
+    telegram.MainButton.text = "button clicked - connected";
     telegram.MainButton.show();
   }
   console.log("telegram" ,telegram)
   return (
     <>
-     <h1>working</h1>
+     <h1>Mayowa's project</h1>
      <button onClick={handleClick}>start app</button>
     </>
   )
