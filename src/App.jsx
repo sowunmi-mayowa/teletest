@@ -4,11 +4,13 @@ function App() {
   const telegram = window.Telegram.WebApp;
 
   useEffect(() => {
-    telegram.ready();
-  }, [])
+    if (telegram) {
+      telegram.ready();
+    }
+  }, [telegram]);
   
   const handleClick = () => {
-    telegram.MainButton.text = "working";
+    telegram.MainButton.text = "button clicked- connected";
     telegram.MainButton.show();
   }
   console.log("telegram" ,telegram)
